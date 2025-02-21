@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Compiled output
+dist/
+build/
+out/
+
+# Dependency directories
+bower_components/
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+
+# Environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
