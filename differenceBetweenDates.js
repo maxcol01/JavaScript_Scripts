@@ -30,7 +30,7 @@ const difference = function(date1, date2){
     let startYear = year1.getFullYear();
     let endYear = year2.getFullYear();
     if (endYear > startYear){
-        console.log("Require to determine the number of leap years in between")
+        
     }
     return differenceInDays
 
