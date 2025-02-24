@@ -30,15 +30,15 @@ const difference = function(date1, date2){
     let startYear = year1.getFullYear();
     let endYear = year2.getFullYear();
     if (endYear > startYear){
-        // what we need is to go from the start year to the end year and check if it is a leap year or not
-        // depending on the result, we substract either 365 or 366 to the total number of days until the remainder is lower that 365.
-        // then we can return the resutls
+        for (let yearIt = startYear; yearIt <= endYear; yearIt++){
+            console.log(yearIt)
+        }
     }
     return differenceInDays
 
 }
 
 const startDate = "1/1/1939"; // formalism of the date is mm/dd/yyyy
-const endDate = "1/5/1939"; // formalism of the date is mm/dd/yyyy
+const endDate = "1/5/1940"; // formalism of the date is mm/dd/yyyy
 
 console.log(difference(startDate, endDate));
