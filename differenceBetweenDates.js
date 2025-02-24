@@ -10,10 +10,13 @@ inputs = [
     "1945",
 ]
 
+
 const isLeap = function(year){
     // condition: divisable by for BUT not by a hundered at the same time OR divisable by 400 
     return (year%4 == 0 && year%100 != 0) || year%400 == 0;
 }
+
+
 
 const numberOfDaysBetweenDates = function(start, end){
     let numberOfDays = Math.floor(end-start)/(3600*24*1000);
@@ -39,8 +42,9 @@ const difference = function(date1, date2){
                 }else{
                     counterDays -= 365
                 }
-                counterYears += 1
+                
             }
+            counterYears += 1
         }
         return {counterYears, counterDays}
 
