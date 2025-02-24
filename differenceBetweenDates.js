@@ -30,9 +30,20 @@ const difference = function(date1, date2){
     let startYear = year1.getFullYear();
     let endYear = year2.getFullYear();
     if (endYear > startYear){
-        for (let yearIt = startYear; yearIt <= endYear; yearIt++){
-            console.log(yearIt)
+        counterDays = differenceInDays;
+        counterYears = 0
+        while (counterDays > 365){
+            for (let yearIt = startYear; yearIt <= endYear; yearIt++){
+                if(isLeap(yearIt)){
+                    counterDays -= 366
+                }else{
+                    counterDays -= 365
+                }
+                counterYears += 1
+            }
         }
+        return {counterYears, counterDays}
+
     }
     return differenceInDays
 
