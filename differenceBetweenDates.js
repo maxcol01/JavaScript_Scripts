@@ -34,6 +34,7 @@ const difference = function(date1, date2){
     let endYear = year2.getFullYear();
     if (endYear > startYear){
         counterDays = differenceInDays;
+        console.log(counterDays)
         counterYears = 0
         while (counterDays > 365){
             for (let yearIt = startYear; yearIt <= endYear; yearIt++){
