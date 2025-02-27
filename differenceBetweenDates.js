@@ -11,6 +11,7 @@ inputs = [
 ]
 
 
+
 const isLeap = function(year){
     // condition: divisable by for BUT not by a hundered at the same time OR divisable by 400 
     return (year%4 == 0 && year%100 != 0) || year%400 == 0;
@@ -25,36 +26,9 @@ const numberOfDaysBetweenDates = function(start, end){
 }
 
 
-const difference = function(date1, date2){
-    let year1 = new Date(date1);
-    let year2 = new Date(date2);
-    // convert the number of days in the formal X year, y day
-    let differenceInDays = numberOfDaysBetweenDates(year1, year2);
-    let startYear = year1.getFullYear();
-    let endYear = year2.getFullYear();
-    if (endYear > startYear){
-        counterDays = differenceInDays;
-        console.log(counterDays)
-        counterYears = 0
-        while (counterDays > 365){
-            for (let yearIt = startYear; yearIt <= endYear; yearIt++){
-                if(isLeap(yearIt)){
-                    counterDays -= 366
-                }else{
-                    counterDays -= 365
-                }
-                
-            }
-            counterYears += 1
-        }
-        return {counterYears, counterDays}
-
-    }
-    return differenceInDays
-
-}
 
 const startDate = "1/1/1939"; // formalism of the date is mm/dd/yyyy
 const endDate = "1/5/1940"; // formalism of the date is mm/dd/yyyy
+
 
 console.log(difference(startDate, endDate));
