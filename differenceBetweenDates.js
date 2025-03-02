@@ -25,6 +25,9 @@ const numberOfDaysBetweenDates = function(start, end){
     // return the number of days between two dates
 }
 
+const difference = function(date1, date2){
+    console.log(numberOfDaysBetweenDates(date1,date2))
+}
 
 
 const startDate = "1/1/1939"; // formalism of the date is mm/dd/yyyy
